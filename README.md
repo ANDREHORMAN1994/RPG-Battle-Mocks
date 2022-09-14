@@ -93,7 +93,7 @@ Dentro do arquivo `service/rollMultipleDice.js` existe a função `rollMultipleD
 <details>
   <summary>Crie os testes para a função <code>rollMultipleDice</code> que é exportada no arquivo <code>service/rollMultipleDice.js</code></summary><br />
 
-- use o `jest.mock` para *mockar* o módulo `service/rollDice`.
+- use o `jest.mock` para *mockar* o módulo `service/rollDice`. Lembre-se de passar como argumento o caminho do arquivo.
 - a função `rollDice` deverá ser *mockada* de forma que a primeira vez que ela é chamada deverá retornar `6`, e da segunda vez em que ela for chamada, deverá retornar `4`;
 - considere um dado de tamanho 20 para este teste;
 - verifique que o valor retornado pela função `rollMultipleDice` seja a somatória de `6` + `4`, ou seja `10`;
@@ -127,7 +127,7 @@ Nesse exercício, você deverá testar a função attackEnemy para esses 3 casos
 <details>
   <summary>Crie os testes para a função <code>attackEnemy</code> que é exportada no arquivo <code>service/attackEnemy.js</code></summary><br />
 
-- use o  `jest.mock` para *mockar* o módulo `service/rollMultipleDice.js`.
+- use o  `jest.mock` para *mockar* o módulo `service/rollMultipleDice.js`. Lembre-se de passar como argumento o caminho do arquivo.
 - em todos os testes você deverá testar o resultado da função `attackEnemy`.
 - Limpe os mocks feitos cada teste.
 
