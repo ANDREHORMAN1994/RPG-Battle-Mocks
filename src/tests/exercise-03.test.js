@@ -1,10 +1,6 @@
 // import rollMultipleDice from '../service/rollMultipleDice';
 // import attackEnemy from '../service/attackEnemy';
 
-afterEach(() => {
-  // Limpe os mocks aqui!
-});
-
 it('testa uma vitória na função `attackEnemy`', () => {
   /*
     Exercício 03

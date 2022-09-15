@@ -13,7 +13,7 @@
 
 - Rode o comando `npm install`.
 
-- Vá para a branch `main` do seu projeto e execute o comando `git branch` ou `git branch -a`
+- Vá para a branch `main` do seu projeto e execute o comando `git branch` ou `git branch -a`.
 
 > 💡 Observe o que deve ser feito nas instruções para cada exercício.
 
@@ -24,13 +24,13 @@
 <details>
   <summary><strong>🤝 Depois de terminar o desenvolvimento</strong></summary><br />
 
-Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a `main`, sinta-se a vontade!
+Após a solução dos exercícios, abra um PR no seu repositório forkado e, se quiser, mergeie para a `main`. Sinta-se à vontade!
 
-**Atenção!**: Quando for criar o PR você irá se deparar com essa tela:
+**Atenção!**: Ao criar o PR,  você irá se deparar com essa tela:
 
 ![PR do exercício](images/example-pr.png)
 
-É necessário realizar uma mudança. Clique no _base repository_ como na imagem abaixo:
+É necessário realizar uma mudança. Para isso, clique no _base repository_ como na imagem abaixo:
 
 ![Mudando a base do repositório](images/change-base.png)
 
@@ -50,11 +50,11 @@ Agora, basta criar o PULL REQUEST clicando no botão `Create Pull Request`.
 <details>
   <summary><strong>👨‍💻 O que deverá ser desenvolvido</strong></summary><br />
 
-Nesse repositório você encontra uma aplicação React funcionando, que simula, de forma muito simplificada, como funciona uma batalha de RPG, onde você pode escolher atacar vários personagens.
+Nesse repositório, você encontra uma aplicação React funcionando que simula, de forma muito simplificada, como funciona uma batalha de RPG, a qual você pode escolher atacar vários personagens.
 
-Você pode configurar quantos dados e qual o tamanho dos dados que você que rolar contra seus inimigos antes de atacar. Depois do ataque você saberá se você venceu ou se foi derrotado.
+Além disso, antes de atacar, você pode configurar quantos e qual o tamanho dos dados que você que rolar contra seus inimigos. Após o ataque, você saberá se venceu ou se teve uma derrota. 
 
-Neste exercício, além das batalhas épicas contra personagens famosos, você também terá o desafio de criar testes para as funções que geram os números aleatórios e também para as requisições feitas para a API externa. Prepare seu D20 e bora para essa aventura!
+Neste exercício, além das batalhas épicas contra personagens famosos, você também terá o desafio de criar testes para as funções que geram os números aleatórios e para as requisições feitas a API externa. Prepare seu D20 e bora para essa aventura!
 
 Verifique com atenção a implementação das funções abaixo, pois você irá desenvolver testes para elas:
 
@@ -70,7 +70,7 @@ Verifique com atenção a implementação das funções abaixo, pois você irá 
 
 ## Exercício 1
 
-Verifique o arquivo `service/rollDice.js`. Ele implementa uma função `rollDice`, que simula como se uma pessoa tivesse rolando um dado, ou seja, a função retorna um número aleatório entre 1 e o valor máximo do dado. O valor máximo do dado é definido através de um parâmetro chamado `size`.
+Verifique o arquivo `service/rollDice.js`, ele implementa uma função `rollDice`, a qual faz uma simulação como se uma pessoa estivesse rolando um dado. Ou seja, a função retorna um número aleatório entre 1 e o valor máximo do dado (definido por meio de um parâmetro chamado `size`).
 
 Para gerar o número aleatório, é usada a função `Math.random`, além de alguns outros cálculos para garantir que o número esteja dentro do intervalo estabelecido.
 
@@ -88,7 +88,7 @@ Testar o retorno de uma função que usa valores randômicos não é possível, 
 
 ## Exercício 2
 
-Dentro do arquivo `service/rollMultipleDice.js` existe a função `rollMultipleDice`. Essa é uma função que simula como se a pessoa tivesse rolado vários dados ao mesmo tempo. Ela recebe como parâmetro quantos dados foram rolados e qual o tamanho dos dados. Para gerar o valor de cada dado, a função `rollMultipleDice` usa, internamente, a função `rollDice`.
+Dentro do arquivo `service/rollMultipleDice.js` existe a função `rollMultipleDice`. Essa é uma função que simula como se a pessoa estivesse rolado vários dados ao mesmo tempo. Ela recebe como parâmetro quantos dados foram rolados e qual o tamanho dos dados. Para gerar o valor de cada dado, a função `rollMultipleDice` usa, internamente, a função `rollDice`.
 
 <details>
   <summary>Crie os testes para a função <code>rollMultipleDice</code> que é exportada no arquivo <code>service/rollMultipleDice.js</code></summary><br />
@@ -116,7 +116,7 @@ A função `attackEnemy` simula um ataque a um inimigo. Ela compara os resultado
     ``` 
 - O **retorno** dessa função é um objeto que possui a chave `success` - que será `true` ou `false` dependendo do resultado da batalha.  
 
-No exemplo acima do Chapolin, com 30 pontos de defesa, você precisará tirar nos dados um valor maior que 30 para ganhar. Nesse caso temos 3 cenários que podem ser testados: 
+No exemplo acima do Chapolin, com 30 pontos de defesa, você precisará tirar nos dados um valor maior que 30 para ganhar. Nesse caso, temos 3 cenários que podem ser testados: 
 
 1. Você tira nos dados um valor menor que `30` = derrota
 2. Você tira nos dados um valor maior que `30` = vitória
@@ -129,7 +129,6 @@ Nesse exercício, você deverá testar a função attackEnemy para esses 3 casos
 
 - use o  `jest.mock` para *mockar* o módulo `service/rollMultipleDice.js`. Lembre-se de passar como argumento o caminho do arquivo.
 - em todos os testes você deverá testar o resultado da função `attackEnemy`.
-- Limpe os mocks feitos cada teste.
 
 - crie um teste para o caso de **vitória**:
   - a função `rollMultipleDice` deverá ser *mockada* de forma que a primeira vez que ela é chamada deverá retornar um valor maior do que a defesa do inimigo.
@@ -147,9 +146,9 @@ Nesse exercício, você deverá testar a função attackEnemy para esses 3 casos
 
 ## Exercício 4
 
-Os personagens usados nas batalhas chegam em nossa aplicação através de uma API. Quando a aplicação é renderizada, uma requisição é feita e uma lista de personagens é preenchida no estado.
+Os personagens usados nas batalhas chegam em nossa aplicação por meio de uma API. Quando a aplicação é renderizada, uma requisição é feita e uma lista de personagens é preenchida no estado.
 
-Neste exercício você irá criar um teste _mockando_ a chamada da API de forma que seja retornado uma lista com apenas 1 personagem (do seu mock).
+Neste exercício, você irá criar um teste _mockando_ a chamada da API de forma que seja retornado uma lista com apenas 1 personagem (do seu mock).
 
 <details>
   <summary>Crie um teste renderizando a aplicação e mockando o retorno da API</summary><br />
