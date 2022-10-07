@@ -97,7 +97,7 @@ Dentro do arquivo `service/rollMultipleDice.js` existe a função `rollMultipleD
 - a função `rollDice` deverá ser *mockada* de forma que a primeira vez que ela é chamada deverá retornar `6`, e da segunda vez em que ela for chamada, deverá retornar `4`;
 - considere um dado de tamanho 20 para este teste;
 - verifique que o valor retornado pela função `rollMultipleDice` seja a somatória de `6` + `4`, ou seja `10`;
-- verifique que a função `rollDicell` foi chamada duas vezes.
+- verifique que a função `rollDice` foi chamada duas vezes.
 
 </details>
 
