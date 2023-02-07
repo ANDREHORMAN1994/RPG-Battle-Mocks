@@ -1,5 +1,5 @@
 {
-  "extends": ["trybe-frontend"],
+  "extends": ["@trybe/eslint-config-frontend"],
   "overrides": [
     {
       "files": ["src/tests/**/*.js"],
@@ -7,7 +7,7 @@
         "max-len": [
           "error",
           {
-            "code": 90,
+            "code": 120,
             "ignoreComments": true,
             "ignoreUrls": true,
             "ignoreRegExpLiterals": true,
