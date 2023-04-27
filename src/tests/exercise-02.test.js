@@ -1,8 +1,15 @@
-// import rollDice from '../service/rollDice';
-// import rollMultipleDice from '../service/rollMultipleDice';
+import rollDice from '../service/rollDice';
+import rollMultipleDice from '../service/rollMultipleDice';
+
+jest.mock('../service/rollDice');
 
 it('testa a função `rollMultipleDice`', () => {
-  /*
-    Exercício 02
-  */
+  rollDice
+    .mockReturnValueOnce(6)
+    .mockReturnValue(4);
+
+  // console.log(rollMultipleDice(2, 20));
+  expect(rollMultipleDice(2, 20)).toBe(10);
+
+  expect(rollDice).toHaveBeenCalledTimes(2);
 });
